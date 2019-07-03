@@ -28,7 +28,10 @@ def getMarkerPlayer2(player1):
 		return 'X'
 
 def getPosition():
-	return int(input('Please enter a number (1-9): '))
+	num = int(input('Please enter a number (1-9): '))
+	if num not in [1,2,3,4,5,6,7,8,9]:
+		num = int(input('Please enter a number (1-9): '))
+	return num
 
 
 def place_marker(board, marker, position):
